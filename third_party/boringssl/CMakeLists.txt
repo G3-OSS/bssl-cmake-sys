@@ -1,4 +1,4 @@
-# Copyright (c) 2015, Google Inc.
+# Copyright 2015 The BoringSSL Authors
 #
 # Permission to use, copy, modify, and/or distribute this software for any
 # purpose with or without fee is hereby granted, provided that the above
@@ -20,7 +20,7 @@ cmake_policy(SET CMP0091 NEW)
 
 project(BoringSSL LANGUAGES C CXX)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
@@ -88,6 +88,10 @@ set(
   src/crypto/curve25519/asm/x25519-asm-arm.S
   src/crypto/hrss/asm/poly_rq_mul.S
   src/crypto/poly1305/poly1305_arm_asm.S
+  src/gen/bcm/aes-gcm-avx10-x86_64-apple.S
+  src/gen/bcm/aes-gcm-avx10-x86_64-linux.S
+  src/gen/bcm/aes-gcm-avx2-x86_64-apple.S
+  src/gen/bcm/aes-gcm-avx2-x86_64-linux.S
   src/gen/bcm/aesni-gcm-x86_64-apple.S
   src/gen/bcm/aesni-gcm-x86_64-linux.S
   src/gen/bcm/aesni-x86-apple.S
@@ -217,6 +221,8 @@ set(
 set(
   CRYPTO_SOURCES_NASM
 
+  src/gen/bcm/aes-gcm-avx10-x86_64-win.asm
+  src/gen/bcm/aes-gcm-avx2-x86_64-win.asm
   src/gen/bcm/aesni-gcm-x86_64-win.asm
   src/gen/bcm/aesni-x86-win.asm
   src/gen/bcm/aesni-x86_64-win.asm
@@ -373,7 +379,6 @@ add_library(
   src/crypto/fipsmodule/fips_shared_support.cc
   src/crypto/hpke/hpke.cc
   src/crypto/hrss/hrss.cc
-  src/crypto/keccak/keccak.cc
   src/crypto/kyber/kyber.cc
   src/crypto/lhash/lhash.cc
   src/crypto/md4/md4.cc
@@ -420,11 +425,7 @@ add_library(
   src/crypto/sha/sha256.cc
   src/crypto/sha/sha512.cc
   src/crypto/siphash/siphash.cc
-  src/crypto/slhdsa/fors.cc
-  src/crypto/slhdsa/merkle.cc
   src/crypto/slhdsa/slhdsa.cc
-  src/crypto/slhdsa/thash.cc
-  src/crypto/slhdsa/wots.cc
   src/crypto/stack/stack.cc
   src/crypto/thread.cc
   src/crypto/thread_none.cc
