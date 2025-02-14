@@ -19,7 +19,7 @@ exclude = [
     "*_tests.txt",
     "/boringssl/",
     "/third_party/boringssl/crypto_test_data.cc",
-    "/third_party/boringssl/src/crypto/cipher_extra/test/",
+    "/third_party/boringssl/src/crypto/cipher/test/",
     "/third_party/boringssl/src/crypto/fipsmodule/bn/test/",
     "/third_party/boringssl/src/crypto/fipsmodule/policydocs/",
     "/third_party/boringssl/src/crypto/hpke/test-vectors.json",
