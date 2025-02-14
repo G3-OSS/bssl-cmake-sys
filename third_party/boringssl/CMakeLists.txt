@@ -1,16 +1,16 @@
 # Copyright 2015 The BoringSSL Authors
 #
-# Permission to use, copy, modify, and/or distribute this software for any
-# purpose with or without fee is hereby granted, provided that the above
-# copyright notice and this permission notice appear in all copies.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
-# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-# WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-# MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
-# SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-# WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
-# OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
-# CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 # This file is created by generate_build_files.py. Do not edit manually.
 
@@ -308,8 +308,8 @@ add_library(
   src/crypto/bio/socket.cc
   src/crypto/bio/socket_helper.cc
   src/crypto/blake2/blake2.cc
-  src/crypto/bn_extra/bn_asn1.cc
-  src/crypto/bn_extra/convert.cc
+  src/crypto/bn/bn_asn1.cc
+  src/crypto/bn/convert.cc
   src/crypto/buf/buf.cc
   src/crypto/bytestring/asn1_compat.cc
   src/crypto/bytestring/ber.cc
@@ -317,17 +317,17 @@ add_library(
   src/crypto/bytestring/cbs.cc
   src/crypto/bytestring/unicode.cc
   src/crypto/chacha/chacha.cc
-  src/crypto/cipher_extra/cipher_extra.cc
-  src/crypto/cipher_extra/derive_key.cc
-  src/crypto/cipher_extra/e_aesctrhmac.cc
-  src/crypto/cipher_extra/e_aesgcmsiv.cc
-  src/crypto/cipher_extra/e_chacha20poly1305.cc
-  src/crypto/cipher_extra/e_des.cc
-  src/crypto/cipher_extra/e_null.cc
-  src/crypto/cipher_extra/e_rc2.cc
-  src/crypto/cipher_extra/e_rc4.cc
-  src/crypto/cipher_extra/e_tls.cc
-  src/crypto/cipher_extra/tls_cbc.cc
+  src/crypto/cipher/derive_key.cc
+  src/crypto/cipher/e_aesctrhmac.cc
+  src/crypto/cipher/e_aesgcmsiv.cc
+  src/crypto/cipher/e_chacha20poly1305.cc
+  src/crypto/cipher/e_des.cc
+  src/crypto/cipher/e_null.cc
+  src/crypto/cipher/e_rc2.cc
+  src/crypto/cipher/e_rc4.cc
+  src/crypto/cipher/e_tls.cc
+  src/crypto/cipher/get_cipher.cc
+  src/crypto/cipher/tls_cbc.cc
   src/crypto/conf/conf.cc
   src/crypto/cpu_aarch64_apple.cc
   src/crypto/cpu_aarch64_fuchsia.cc
@@ -343,16 +343,16 @@ add_library(
   src/crypto/curve25519/curve25519_64_adx.cc
   src/crypto/curve25519/spake25519.cc
   src/crypto/des/des.cc
-  src/crypto/dh_extra/dh_asn1.cc
-  src/crypto/dh_extra/params.cc
-  src/crypto/digest_extra/digest_extra.cc
+  src/crypto/dh/dh_asn1.cc
+  src/crypto/dh/params.cc
+  src/crypto/digest/digest_extra.cc
   src/crypto/dsa/dsa.cc
   src/crypto/dsa/dsa_asn1.cc
-  src/crypto/ec_extra/ec_asn1.cc
-  src/crypto/ec_extra/ec_derive.cc
-  src/crypto/ec_extra/hash_to_curve.cc
-  src/crypto/ecdh_extra/ecdh_extra.cc
-  src/crypto/ecdsa_extra/ecdsa_asn1.cc
+  src/crypto/ec/ec_asn1.cc
+  src/crypto/ec/ec_derive.cc
+  src/crypto/ec/hash_to_curve.cc
+  src/crypto/ecdh/ecdh.cc
+  src/crypto/ecdsa/ecdsa_asn1.cc
   src/crypto/engine/engine.cc
   src/crypto/err/err.cc
   src/crypto/evp/evp.cc
@@ -405,27 +405,28 @@ add_library(
   src/crypto/poly1305/poly1305_arm.cc
   src/crypto/poly1305/poly1305_vec.cc
   src/crypto/pool/pool.cc
-  src/crypto/rand_extra/deterministic.cc
-  src/crypto/rand_extra/fork_detect.cc
-  src/crypto/rand_extra/forkunsafe.cc
-  src/crypto/rand_extra/getentropy.cc
-  src/crypto/rand_extra/ios.cc
-  src/crypto/rand_extra/passive.cc
-  src/crypto/rand_extra/rand_extra.cc
-  src/crypto/rand_extra/trusty.cc
-  src/crypto/rand_extra/urandom.cc
-  src/crypto/rand_extra/windows.cc
+  src/crypto/rand/deterministic.cc
+  src/crypto/rand/fork_detect.cc
+  src/crypto/rand/forkunsafe.cc
+  src/crypto/rand/getentropy.cc
+  src/crypto/rand/ios.cc
+  src/crypto/rand/passive.cc
+  src/crypto/rand/rand.cc
+  src/crypto/rand/trusty.cc
+  src/crypto/rand/urandom.cc
+  src/crypto/rand/windows.cc
   src/crypto/rc4/rc4.cc
   src/crypto/refcount.cc
-  src/crypto/rsa_extra/rsa_asn1.cc
-  src/crypto/rsa_extra/rsa_crypt.cc
-  src/crypto/rsa_extra/rsa_extra.cc
-  src/crypto/rsa_extra/rsa_print.cc
+  src/crypto/rsa/rsa_asn1.cc
+  src/crypto/rsa/rsa_crypt.cc
+  src/crypto/rsa/rsa_extra.cc
+  src/crypto/rsa/rsa_print.cc
   src/crypto/sha/sha1.cc
   src/crypto/sha/sha256.cc
   src/crypto/sha/sha512.cc
   src/crypto/siphash/siphash.cc
   src/crypto/slhdsa/slhdsa.cc
+  src/crypto/spake2plus/spake2plus.cc
   src/crypto/stack/stack.cc
   src/crypto/thread.cc
   src/crypto/thread_none.cc
