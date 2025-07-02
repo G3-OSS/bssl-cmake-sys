@@ -513,6 +513,7 @@ add_library(
   src/crypto/x509/x_val.cc
   src/crypto/x509/x_x509.cc
   src/crypto/x509/x_x509a.cc
+  src/crypto/xwing/xwing.cc
   src/gen/crypto/err_data.cc
 )
 
