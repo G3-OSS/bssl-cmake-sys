@@ -26,7 +26,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout sources
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: true
       - name: Install ${{ matrix.rust }} toolchain
@@ -49,7 +49,7 @@ jobs:
       - name: Install ninja
         run: choco install ninja
       - name: Checkout sources
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: true
       - name: Install ${{ matrix.rust }} toolchain
@@ -63,7 +63,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout sources
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: true
       - name: Install stable toolchain
