@@ -68,7 +68,7 @@ else()
     if(NOT WIN32)
       set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -Wa,--noexecstack")
     endif()
-    # Clang's integerated assembler does not support debug symbols.
+    # Clang's integrated assembler does not support debug symbols.
     if(NOT CMAKE_ASM_COMPILER_ID MATCHES "Clang")
       set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -Wa,-g")
     endif()
@@ -366,17 +366,13 @@ add_library(
   src/crypto/evp/evp_asn1.cc
   src/crypto/evp/evp_ctx.cc
   src/crypto/evp/p_dh.cc
-  src/crypto/evp/p_dh_asn1.cc
-  src/crypto/evp/p_dsa_asn1.cc
+  src/crypto/evp/p_dsa.cc
   src/crypto/evp/p_ec.cc
-  src/crypto/evp/p_ec_asn1.cc
   src/crypto/evp/p_ed25519.cc
-  src/crypto/evp/p_ed25519_asn1.cc
   src/crypto/evp/p_hkdf.cc
+  src/crypto/evp/p_mldsa.cc
   src/crypto/evp/p_rsa.cc
-  src/crypto/evp/p_rsa_asn1.cc
   src/crypto/evp/p_x25519.cc
-  src/crypto/evp/p_x25519_asn1.cc
   src/crypto/evp/pbkdf.cc
   src/crypto/evp/print.cc
   src/crypto/evp/scrypt.cc
